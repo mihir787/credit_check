@@ -19,7 +19,7 @@ class CreditCheckTest < Minitest::Test
 
   def test_adds_individual_digits_of_those_over_nine
     credit_check = CreditCheck.new
-    # [1,2,3,4,5,6] -> [2,2,6,4,10,6] --> [2,2,6,4,1,6]
+
     assert_equal [2,2,6,4,1,6], credit_check.add_digits_over_nine([2,2,6,4,10,6])
     assert_equal [1,4,3,8,5], credit_check.add_digits_over_nine([1,4,3,8,5])
   end
